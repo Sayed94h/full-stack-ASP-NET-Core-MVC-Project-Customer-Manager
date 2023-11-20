@@ -1,7 +1,7 @@
 
-# full-stack-ASP-NET-Core-MVC-Project-Customer-Manager
+# Full Stack ASP.NET Core MVC Course
 
-In this ASP.NET core MVC course or ASP.NET Core MVC Tutorial you will learn how to build a full stack web application. This project helps you learn all the core concepts of ASP.NET Core MVC. 
+In this project we will build a Full Stack CRUD Web Application to manage our customers. In this ASP.NET core MVC course or ASP.NET Core MVC Tutorial you will learn how to build a full stack web application. This project helps you learn all the core concepts of ASP.NET Core MVC. 
 
 _> This project is part of my YouTube tutorials. I explained this course in details. You can watch it [here](https://youtu.be/b7HCZJlchas?si=6aM6h6AhFbf0ZdC8)._
 
