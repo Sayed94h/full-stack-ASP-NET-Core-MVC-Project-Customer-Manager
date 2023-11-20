@@ -1,0 +1,101 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Register New Customer";
+    String error = ViewBag.ErrorMessage;
+}
+
+
+
+<section>
+    <h3>Here you can Create / Register A New customer.</h3>
+
+    @if(!string.IsNullOrEmpty(error))
+    {
+        <p class="red">
+            @error
+        </p>
+    }
+
+    <section class="form-holder">
+        <form method="post" asp-action="NewCustomer" asp-controller="Customer" enctype="application/x-www-form-urlencoded">
+
+
+            <div>
+                <div class="lbl">
+                    <label>Full Name *</label>
+                </div>
+                <input type="text" name="Name" required maxlength="50" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Email *</label>
+                </div>
+                <input type="email" name="Email" required maxlength="100" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Phone</label>
+                </div>
+                <input type="text" name="Phone" maxlength="30" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Address</label>
+                </div>
+                <input type="text" name="Address" maxlength="100" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Job Title</label>
+                </div>
+                <input type="text" name="JobTitle" maxlength="50" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Password *</label>
+                </div>
+                <input type="text" name="Password" maxlength="20" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Is Active</label>
+                </div>
+                <select name="IsActive">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Is Admin</label>
+                </div>
+                <select name="IsAdmin">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Birthday</label>
+                </div>
+                <input type="date" name="Birthday" />
+            </div>
+
+            <div class="submit">
+
+                <input type="submit" value="Add" />
+            </div>
+
+        </form>
+    </section>
+</section>

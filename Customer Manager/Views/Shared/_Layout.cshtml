@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Customer Manager</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="hdr-top">
+            <div class="flex">
+                <a class="me-10 logo" asp-area="" asp-controller="Home" asp-action="Index">Aqyanoos</a>
+                
+                <div class="flex">
+                    <div class="me-10">
+                        <a class="" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </div>
+
+                    <div class="me-10">
+                        <a class="" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class=" footer ">
+        <div class="container">
+            &copy; 2023 - Customer Manager - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

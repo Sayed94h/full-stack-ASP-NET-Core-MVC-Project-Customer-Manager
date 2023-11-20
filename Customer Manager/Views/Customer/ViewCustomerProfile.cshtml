@@ -1,0 +1,80 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Customer Profile";
+}
+
+
+@model CustomerViewModel
+
+<section>
+    <h3>This is your profile Mr/Sir/Mrs/Mss</h3>
+
+    <section class="form-holder">
+        <div class="form">
+
+           <div class="profile-hdr">
+                @Model.Name
+           </div>
+
+           <hr />
+
+            <div>
+                @Model.Email
+            </div>
+
+            <div>
+                @Model.Phone
+            </div>
+
+            <div>
+                @Model.Address
+            </div>
+
+            <div>
+              I am a  @Model.JobTitle .
+            </div>
+
+
+            <div>
+                The Customer is active:  @if (Model.IsActive)
+                {
+                    <span> Yes</span>
+                }
+                else
+                {
+                    <span> No</span>
+                }
+                
+            </div>
+
+            <div>
+                Is Admin:  @if (Model.IsAdmin)
+                {
+                    <span> Yes</span>
+                }
+                else
+                {
+                    <span> No</span>
+                }
+
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Birthday</label>
+                </div>
+                <div>@Model.Birthday.ToString().Split(" ")[0]</div>
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Register Date</label>
+                </div>
+                <div>@Model.CreatedDate.ToString().Split(" ")[0]</div>
+            </div>
+        </div>
+    </section>
+</section>

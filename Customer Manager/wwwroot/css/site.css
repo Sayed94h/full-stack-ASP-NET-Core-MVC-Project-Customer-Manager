@@ -1,0 +1,192 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    font-size: 17px;
+}
+
+.customer-table {
+    width: 100%;
+    height: auto;
+}
+
+.customer-table, .customer-table th, .customer-table td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.customer-table td {
+    text-align: center;
+}
+
+.hdr-top {
+    padding: 15px;
+    background: #005050;
+    color: #fff;
+}
+
+.hdr-top a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-btw {
+    justify-content: space-between;
+}
+
+.me-10 {
+    margin-right: 10px;
+}
+
+
+.green {
+    color: #0f0;
+}
+
+
+.red {
+    color: #f00;
+}
+
+.danger {
+    color: #ffd800;
+}
+
+.green a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+
+.red a {
+    color: #f00;
+    text-decoration: none;
+}
+
+.danger a {
+    color: #ffd800;
+    text-decoration: none;
+}
+
+.footer {
+    background: #005050;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 450px;
+}
+
+.footer a, .register-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.logo {
+    color: aqua;
+}
+
+.register-btn {
+    position: fixed;
+    top: 100px;
+    right: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    background: green;
+}
+
+.form-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+form {
+    min-width: 300px;
+    max-width: 70%;
+}
+
+form label, form .lbl {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid aqua;
+    margin-top: 7px;
+}
+
+form input:focus, form select:focus {
+    outline: 1px solid gold;
+    border: none;
+}
+
+form .submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+form input[type="submit"] {
+    background: green;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+form select {
+    margin-top: 7px;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid aqua;
+}
+
+.lbl {
+    font-weight: bold;
+}
+
+.profile-hdr {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.form div {
+    margin-top: 10px;
+}
+
+.custom-alert {
+    background: #fff;
+    width: 300px;
+    position: fixed;
+    top: 40%;
+    left: calc(50% - 150px);
+    border-radius: 9px;
+    box-shadow: 0 0 3px 2px gray;
+    padding: 3px;
+}
+
+.px-20 {
+    padding: 10px 20px;
+}
+
+.action-section button {
+    padding: 2px 5px;
+    cursor: pointer;
+
+}
+
+.hidden {
+    display: none;
+}

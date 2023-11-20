@@ -1,0 +1,113 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewData["Title"] = "Update Customer";
+    String error = ViewBag.ErrorMessage;
+    String date_ = "";
+    if(Model.Birthday != null)
+    {
+        int month_ = Model.Birthday.Value.Month;
+        int day_ = Model.Birthday.Value.Day;
+        date_ = Model.Birthday.Value.Year + "-" + (month_ > 9 ? month_ : "0" + month_) + "-" + (day_ > 9 ? day_ : "0" + day_);
+    }
+}
+
+@using Customer_Manager.Data.DataModels;
+
+@model CustomerModel
+
+<section>
+    <h3>Here you can update the customer's data.</h3>
+
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <p class="red">
+            @error
+        </p>
+    }
+
+    <section class="form-holder">
+        <form method="post" asp-action="UpdateCustomer" asp-controller="Customer" enctype="application/x-www-form-urlencoded">
+
+            <input class="hidden" type="number" name="ID" value="@Model.ID" />
+
+            <div>
+                <div class="lbl">
+                    <label>Full Name *</label>
+                </div>
+                <input type="text" name="Name" value="@Model.Name" required maxlength="50" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Email *</label>
+                </div>
+                <input type="email" name="Email" value="@Model.Email" required maxlength="100" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Phone</label>
+                </div>
+                <input type="text" name="Phone" value="@Model.Phone" maxlength="30" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Address</label>
+                </div>
+                <input type="text" name="Address" value="@Model.Address" maxlength="100" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Job Title</label>
+                </div>
+                <input type="text" name="JobTitle" value="@Model.JobTitle" maxlength="50" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Password *</label>
+                </div>
+                <input type="text" name="Password" value="@Model.Password" maxlength="20" />
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Is Active</label>
+                </div>
+                <select name="IsActive" asp-for="IsActive">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Is Admin</label>
+                </div>
+                <select name="IsActive" asp-for="IsAdmin">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                
+            </div>
+
+            <div>
+                <div class="lbl">
+                    <label>Birthday</label>
+                </div>
+                <input type="date" name="Birthday" value="@date_" />
+            </div>
+
+            <div>
+
+                <input type="submit" value="Update" />
+            </div>
+
+        </form>
+    </section>
+</section>
