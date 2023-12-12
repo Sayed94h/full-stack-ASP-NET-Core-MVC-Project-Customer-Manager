@@ -6,7 +6,7 @@ In this project we will build a Full Stack CRUD Web Application to manage our cu
 _> This project is part of my YouTube tutorials. I explained this course in details. You can watch it [here](https://youtu.be/b7HCZJlchas?si=6aM6h6AhFbf0ZdC8)._
 
 
-> My YouTube Channel link: [https://www.youtube.com/@aqyanoos](https://www.youtube.com/@aqyanoos). Hopefully see you there.
+> My YouTube Channel link: [https://www.youtube.com/@coding-aqyanoos](https://www.youtube.com/@coding-aqyanoos). Hopefully see you there.
 
 
 ### Important notes
